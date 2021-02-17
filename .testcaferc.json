@@ -1,0 +1,22 @@
+{
+    "src":"./Tests",
+    "disableScreenshots": false,
+    "reporter": [
+        {
+            "name": "spec"
+        },
+        {
+            "name": "json",
+            "output": "reports/report.json"
+        }
+    ],
+
+    "screenshots": {
+        "takeOnFails": true
+    },
+
+    "browsers":"edge",   
+    
+    "quarantineMode": true,
+    "skipJsErrors": true
+}

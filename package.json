@@ -1,0 +1,26 @@
+{
+  "name": "falabella-shopping-cart",
+  "version": "1.0.0",
+  "description": "portfolio project Shopping cart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GirlesaQuinteroR/Falabella-Shopping-cart.git"
+  },
+  "keywords": [
+    "testing",
+    "testcafe"
+  ],
+  "author": "Girlesa Quintero Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GirlesaQuinteroR/Falabella-Shopping-cart/issues"
+  },
+  "homepage": "https://github.com/GirlesaQuinteroR/Falabella-Shopping-cart#readme",
+  "dependencies": {
+    "testcafe": "^1.11.0"
+  }
+}
