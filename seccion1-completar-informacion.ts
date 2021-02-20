@@ -9,7 +9,7 @@ export class CompletarInformacion {
     direccion: Selector = Selector('[formcontrolname="address"]')
     email: Selector = Selector('[formcontrolname="email"]')
     celular: Selector = Selector('[formcontrolname="phone"]')
-    continuarSeccionDos:Selector = Selector('span.mat-button-wrapper') 
+    continuarSeccionDos:Selector = Selector('.mat-asf-round-primary.invalid-form') 
 
 
 }
