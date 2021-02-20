@@ -1,0 +1,31 @@
+{
+  "startTime": "2021-02-20T02:21:03.273Z",
+  "endTime": "2021-02-20T02:22:41.301Z",
+  "userAgents": [
+    "Chrome 88.0.4324.182 / Windows 10"
+  ],
+  "passed": 0,
+  "total": 1,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "E2E",
+      "path": "C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\e2eCotizacionSoat.test.ts",
+      "meta": {},
+      "tests": [
+        {
+          "name": "E2E testing para SOAT Falabella",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected 'https://soat.segurosfalabella.com.co/sale/step0' to include 'https://soat.segurosfalabella.com.co/sale/step1'\n\n+ expected - actual\n\n-'https://soat.segurosfalabella.com.co/sale/step0'\n+undefined\n\n\nBrowser: Chrome 88.0.4324.182 / Windows 10\n\n   22 |/*if (await (datosIniciales.error.visible)){\n   23 |    await t.click( await datosIniciales.recaptcha)\n   24 |    await t.click(datosIniciales.quieroCotizar.filterVisible())\n   25 | }*/\n   26 |await t.expect(getLocation())\n > 27 |.contains(await `https://soat.segurosfalabella.com.co/sale/step1`)\n   28 |\n   29 |//Sección 1 “completa tu información” de la plataforma de seguros\n   30 |await t.click(completarInformacion.beneficio)\n   31 |await t.click(completarInformacion.fechaDeNacimiento)\n   32 |await t.click(completarInformacion.seleccionarDía)\n\n   at <anonymous> (C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\e2eCotizacionSoat.test.ts:27:2)\n   at fulfilled (C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\e2eCotizacionSoat.test.ts:5:58)"
+          ],
+          "durationMs": 97854,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}
