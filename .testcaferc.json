@@ -1,6 +1,6 @@
 {
     "src": "./Tests",
-    "speed": 1,
+    "speed": 0.5,
     "debugOnFail": false,
     "disableScreenshots": false,
     "reporter": [
