@@ -1,10 +1,13 @@
 import {DatosIniciales} from '../datos-iniciales'
-import {CompletarInformacion} from '../seccion1-completarI-informacion'
+import {CompletarInformacion} from '../seccion1-completar-informacion'
 import { ClientFunction, Selector } from 'testcafe'
+import { PagarSoat } from './seccion2-pagar'
+
 
 
 const  datosIniciales = new DatosIniciales()
 const completarInformacion = new CompletarInformacion()
+const pagarSoat = new PagarSoat()
 
 const getLocation = ClientFunction(() => document.location.href)
 
@@ -19,6 +22,7 @@ await t.typeText(datosIniciales.placa,'efv204').pressKey('enter')
 await t.click(datosIniciales.terminosyCondiciones)
 await t.click(datosIniciales.terminosyCondiciones)
 await t.click(datosIniciales.quieroCotizar.filterVisible())
+//Este fue el intento realizado para evadir el reCAPTCHA. 
 /*if (await (datosIniciales.error.visible)){
     await t.click( await datosIniciales.recaptcha)
     await t.click(datosIniciales.quieroCotizar.filterVisible())
@@ -37,6 +41,14 @@ await t.typeText(completarInformacion.email,'prueba@gr5.com')
 await t.typeText(completarInformacion.celular,'3005554433')
 await t.expect(await botonContinuar.innerText).contains("Continuar").click
 
+//Sección 2 “Paga tu soat”
 
+await t.click(pagarSoat.formaDePago)
+await t.click(pagarSoat.seleccionarBanco)
+await t.click(pagarSoat.elegirBanco)
+await t.click(pagarSoat.tipoCliente)
+await t.click(pagarSoat.elegirTipoCliente)
+await t.click(pagarSoat.terminosCondiciones)
+await t.click(pagarSoat.continuar)
 
 })
