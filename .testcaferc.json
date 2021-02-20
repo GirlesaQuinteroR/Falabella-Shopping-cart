@@ -1,5 +1,7 @@
 {
-    "src":"./Tests",
+    "src": "./Tests",
+    "speed": 0.1,
+    "debugOnFail": true,
     "disableScreenshots": false,
     "reporter": [
         {
@@ -10,13 +12,10 @@
             "output": "reports/report.json"
         }
     ],
-
     "screenshots": {
         "takeOnFails": true
     },
-
-    "browsers":"edge",   
-    
+    "browsers": "chrome",
     "quarantineMode": true,
     "skipJsErrors": true
 }

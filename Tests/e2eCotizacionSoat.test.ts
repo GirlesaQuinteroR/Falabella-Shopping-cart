@@ -12,15 +12,19 @@ fixture`E2E`.page`https://soat.segurosfalabella.com.co/sale/step0`
 
 test('E2E testing para SOAT Falabella', async t => {
     const botonContinuar = completarInformacion.continuarSeccionDos
-await t
+
 //Datos Iniciales
-.click(datosIniciales.placa)
-.typeText(datosIniciales.placa,'efv204').pressKey('enter')
-.click(datosIniciales.terminosyCondiciones)
-.click(datosIniciales.terminosyCondiciones)
-.click(datosIniciales.quieroCotizar.filterVisible())
-.expect(getLocation())
-.contains(`https://soat.segurosfalabella.com.co/sale/step1`)
+await t.click(datosIniciales.placa)
+await t.typeText(datosIniciales.placa,'efv204').pressKey('enter')
+await t.click(datosIniciales.terminosyCondiciones)
+await t.click(datosIniciales.terminosyCondiciones)
+await t.click(datosIniciales.quieroCotizar.filterVisible())
+if (await (datosIniciales.error.visible)){
+    await t.click( await datosIniciales.recaptcha)
+    await t.click(datosIniciales.quieroCotizar.filterVisible())
+ }
+await t.expect(getLocation())
+.contains(await `https://soat.segurosfalabella.com.co/sale/step1`)
 
 //Sección 1 “completa tu información” de la plataforma de seguros
 await t.click(completarInformacion.beneficio)
