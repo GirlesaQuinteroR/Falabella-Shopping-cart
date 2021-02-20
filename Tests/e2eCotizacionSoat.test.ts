@@ -19,10 +19,10 @@ await t.typeText(datosIniciales.placa,'efv204').pressKey('enter')
 await t.click(datosIniciales.terminosyCondiciones)
 await t.click(datosIniciales.terminosyCondiciones)
 await t.click(datosIniciales.quieroCotizar.filterVisible())
-if (await (datosIniciales.error.visible)){
+/*if (await (datosIniciales.error.visible)){
     await t.click( await datosIniciales.recaptcha)
     await t.click(datosIniciales.quieroCotizar.filterVisible())
- }
+ }*/
 await t.expect(getLocation())
 .contains(await `https://soat.segurosfalabella.com.co/sale/step1`)
 
