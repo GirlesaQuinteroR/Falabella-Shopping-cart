@@ -39,7 +39,7 @@ await t.click(completarInformacion.seleccionarGenero)
 await t.typeText(completarInformacion.direccion,'calle10 carrera50')
 await t.typeText(completarInformacion.email,'prueba@gr5.com')
 await t.typeText(completarInformacion.celular,'3005554433')
-await t.expect(await botonContinuar.innerText).contains("Continuar").click
+await t.click(completarInformacion.continuarSeccionDos)
 
 //Sección 2 “Paga tu soat”
 

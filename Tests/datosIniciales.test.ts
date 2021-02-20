@@ -13,10 +13,10 @@ await t.click(datosIniciales.placa)
 await t.typeText(datosIniciales.placa,'efv204').pressKey('enter')
 await t.click(datosIniciales.terminosyCondiciones)
 await t.click(datosIniciales.quieroCotizar.filterVisible())
-.expect(await datosIniciales.errorContinuarsinTerminos).ok()
+.expect(await datosIniciales.errorContinuarsinTerminos.exists)
 })
 
 test('Verificar aparece mensaje de error si continuo sin ingresar placa', async t => {
 await t.click(datosIniciales.quieroCotizar.filterVisible())
-.expect(await datosIniciales.errorIngresarPlaca).ok()
+.expect(await datosIniciales.errorIngresarPlaca.exists)
 })
