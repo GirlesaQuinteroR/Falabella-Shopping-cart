@@ -20,7 +20,9 @@
     "url": "https://github.com/GirlesaQuinteroR/Falabella-Shopping-cart/issues"
   },
   "homepage": "https://github.com/GirlesaQuinteroR/Falabella-Shopping-cart#readme",
-  "dependencies": {
-    "testcafe": "^1.11.0"
+  "dependencies": {},
+  "devDependencies": {
+    "testcafe": "^1.11.0",
+    "testcafe-reporter-xunit": "^2.1.0"
   }
 }
