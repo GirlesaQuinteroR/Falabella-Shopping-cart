@@ -1,0 +1,57 @@
+{
+  "startTime": "2021-02-20T21:32:15.654Z",
+  "endTime": "2021-02-20T21:35:05.630Z",
+  "userAgents": [
+    "Chrome 88.0.4324.182 / Windows 10"
+  ],
+  "passed": 2,
+  "total": 3,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "Prueba de Componente: Datos Iniciales",
+      "path": "C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\datosIniciales.test.ts",
+      "meta": {},
+      "tests": [
+        {
+          "name": "Verificar aparece mensaje de error si continuo sin verificar términos",
+          "meta": {},
+          "errs": [],
+          "durationMs": 28771,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "Verificar aparece mensaje de error si continuo sin ingresar placa",
+          "meta": {},
+          "errs": [],
+          "durationMs": 7237,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "E2E",
+      "path": "C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\e2eCotizacionSoat.test.ts",
+      "meta": {},
+      "tests": [
+        {
+          "name": "E2E testing para SOAT Falabella",
+          "meta": {},
+          "errs": [
+            "The element that matches the specified selector is not visible.\n\nBrowser: Chrome 88.0.4324.182 / Windows 10\n\n   17 |    const botonContinuar = completarInformacion.continuarSeccionDos\n   18 |\n   19 |//Datos Iniciales\n   20 |await t.click(datosIniciales.placa)\n   21 |await t.typeText(datosIniciales.placa,'efv204').pressKey('enter')\n > 22 |await t.click(datosIniciales.terminosyCondiciones)\n   23 |await t.click(datosIniciales.terminosyCondiciones)\n   24 |await t.click(datosIniciales.quieroCotizar.filterVisible())\n   25 |//Este fue el intento realizado para evadir el reCAPTCHA. \n   26 |/*if (await (datosIniciales.error.visible)){\n   27 |    await t.click( await datosIniciales.recaptcha)\n\n   at <anonymous> (C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\e2eCotizacionSoat.test.ts:22:9)\n   at fulfilled (C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\e2eCotizacionSoat.test.ts:5:58)"
+          ],
+          "durationMs": 133758,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "You passed a Selector object to 't.expect()'.\nIf you want to check that a matched element exists, pass the 'selector.exists' value instead.\n\n   11 |test('Verificar aparece mensaje de error si continuo sin verificar términos', async t => {\n   12 |await t.click(datosIniciales.placa)\n   13 |await t.typeText(datosIniciales.placa,'efv204').pressKey('enter')\n   14 |await t.click(datosIniciales.terminosyCondiciones)\n   15 |await t.click(datosIniciales.quieroCotizar.filterVisible())\n > 16 |.expect(await datosIniciales.errorContinuarsinTerminos).ok()\n   17 |})\n   18 |\n   19 |test('Verificar aparece mensaje de error si continuo sin ingresar placa', async t => {\n   20 |await t.click(datosIniciales.quieroCotizar.filterVisible())\n   21 |.expect(await datosIniciales.errorIngresarPlaca).ok()\n\n   at <anonymous> (C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\datosIniciales.test.ts:16:2)\n   at fulfilled (C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\datosIniciales.test.ts:5:58)",
+    "You passed a Selector object to 't.expect()'.\nIf you want to check that a matched element exists, pass the 'selector.exists' value instead.\n\n   16 |.expect(await datosIniciales.errorContinuarsinTerminos).ok()\n   17 |})\n   18 |\n   19 |test('Verificar aparece mensaje de error si continuo sin ingresar placa', async t => {\n   20 |await t.click(datosIniciales.quieroCotizar.filterVisible())\n > 21 |.expect(await datosIniciales.errorIngresarPlaca).ok()\n   22 |})\n   23 |\n\n   at <anonymous> (C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\datosIniciales.test.ts:21:2)\n   at fulfilled (C:\\GoogleDrive\\Falabella-Shopping-cart\\Tests\\datosIniciales.test.ts:5:58)"
+  ]
+}

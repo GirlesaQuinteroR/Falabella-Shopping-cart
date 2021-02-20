@@ -19,8 +19,8 @@ test('E2E testing para SOAT Falabella', async t => {
 //Datos Iniciales
 await t.click(datosIniciales.placa)
 await t.typeText(datosIniciales.placa,'efv204').pressKey('enter')
-await t.click(datosIniciales.terminosyCondiciones)
-await t.click(datosIniciales.terminosyCondiciones)
+await t.click(datosIniciales.terminosyCondiciones.filterVisible())
+await t.click(datosIniciales.terminosyCondiciones.filterVisible())
 await t.click(datosIniciales.quieroCotizar.filterVisible())
 //Este fue el intento realizado para evadir el reCAPTCHA. 
 /*if (await (datosIniciales.error.visible)){
