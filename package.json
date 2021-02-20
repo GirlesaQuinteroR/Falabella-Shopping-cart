@@ -4,7 +4,7 @@
   "description": "portfolio project Shopping cart",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./Tests/e2eCotizacionSoat.test.ts "
+    "test": "testcafe chrome ./Tests "
   },
   "repository": {
     "type": "git",
