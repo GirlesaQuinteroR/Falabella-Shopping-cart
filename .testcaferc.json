@@ -1,7 +1,7 @@
 {
     "src": "./Tests",
-    "speed": 0.1,
-    "debugOnFail": true,
+    "speed": 1,
+    "debugOnFail": false,
     "disableScreenshots": false,
     "reporter": [
         {
@@ -13,7 +13,7 @@
         }
     ],
     "screenshots": {
-        "takeOnFails": true
+        "takeOnFails": false
     },
     "browsers": "chrome",
     "quarantineMode": true,

@@ -4,7 +4,7 @@
   "description": "portfolio project Shopping cart",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "testcafe chrome:emulation:width=1025 ./Tests/e2eCotizacionSoat.test.ts "
   },
   "repository": {
     "type": "git",
